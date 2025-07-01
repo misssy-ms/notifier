@@ -1,4 +1,5 @@
 @echo off
+rem (c) 2025 misssy-ms All rights reserved. Version 1.1
 setlocal
 set /p argument=確認する引数を入力してください:
 set /p var=引数:%argument%で実行します｡notifier.exeがあることを確認してください｡
@@ -57,32 +58,32 @@ if %code%==0 (
   echo 終了コード: %code%
   echo 問題なく送信され､テキストボックスの内容を出力できました｡
   echo エラー: ありません｡
-  echo ユーザーアクション: テキストボックスの内容(notifier.txt)
-  type notifier.txt || ファイルを読み込めません｡ファイルが存在しない場合はnotifierに問題がある可能性があります｡
+  echo ユーザーアクション: テキストボックスの内容^(notifier.txt^)
+  type notifier.txt || echo ファイルを読み込めません｡ファイルが存在しない場合はnotifierに問題がある可能性があります｡
   echo [TIP] 文字化けしている場合はエンコードが間違っている可能性があります｡"--shiftjis"を追加してください｡
 ) else if %code%==21 (
   echo 終了コード: %code%
   echo 問題なく送信され､ボタンをクリックしました｡
   echo エラー: ありません｡
-  echo ユーザーアクション: ボタン1(btn1)をクリック
+  echo ユーザーアクション: ボタン1^(btn1^)をクリック
 ) else if %code%==22 (
   echo 終了コード: %code%
   echo 問題なく送信され､ボタンをクリックしました｡
   echo エラー: ありません｡
-  echo ユーザーアクション: ボタン2(btn2)をクリック
+  echo ユーザーアクション: ボタン2^(btn2^)をクリック
 ) else if %code%==23 (
   echo 終了コード: %code%
   echo 問題なく送信され､ボタンをクリックしました｡
   echo エラー: ありません｡
-  echo ユーザーアクション: ボタン3(btn3)をクリック
+  echo ユーザーアクション: ボタン3^(btn3^)をクリック
 ) else if %code%==24 (
   echo 終了コード: %code%
   echo 問題なく送信され､ボタンをクリックしました｡
   echo エラー: ありません｡
-  echo ユーザーアクション: ボタン4(btn4)をクリック
+  echo ユーザーアクション: ボタン4^(btn4^)をクリック
 ) else (
-  [ERROR] 不明な終了コード:%code%
-  [TIP] taskkillなどで強制終了されている可能性があります｡
+  echo [ERROR] 不明な終了コード:%code%
+  echo [TIP] taskkillなどで強制終了されている可能性があります｡
 )
 pause
 endlocal
