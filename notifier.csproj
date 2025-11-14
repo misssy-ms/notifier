@@ -17,7 +17,7 @@
     <PackageIcon>icon.png</PackageIcon>
     <ApplicationIcon>icons\icon.ico</ApplicationIcon>
     <PackAsTool>False</PackAsTool>
-    <Version>1.0.0.0</Version>
+    <Version>1.0.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

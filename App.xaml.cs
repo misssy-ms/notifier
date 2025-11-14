@@ -83,7 +83,7 @@ namespace notifier
         {
           shiftJis = true;
         }
-        else if (arg.StartsWith("--headerid=") && int.Parse(arg["--headerid=".Length..].Trim('"')) >= 1000) // ここを変更して規制解除
+        else if (arg.StartsWith("--headerid=") && int.Parse(arg["--headerid=".Length..].Trim('"')) == 1000) // ここを変更して規制解除
         {
           headerId = arg["--headerid=".Length..].Trim('"');
         }
@@ -91,7 +91,7 @@ namespace notifier
         {
           headerTitle = arg["--headertitle=".Length..].Trim('"');
         }
-        else if (int.Parse(arg["--headerid=".Length..].Trim('"')) < 999) // ここを変更して規制解除(不要な可能性有)
+        else if (arg.StartsWith("--headerid=") && int.Parse(arg["--headerid=".Length..].Trim('"')) < 999) // ここを変更して規制解除(不要な可能性有)
         {
           Environment.Exit(15);
         }

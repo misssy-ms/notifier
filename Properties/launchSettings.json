@@ -1,7 +1,8 @@
 {
   "profiles": {
     "引数テスト": {
-      "commandName": "Project"
+      "commandName": "Project",
+      "commandLineArgs": "--title=\"{title}\" --index=\"{index}\" --headerid=\"2000\" --headertitle=\"時間割更新システム\""
     }
   }
 }
